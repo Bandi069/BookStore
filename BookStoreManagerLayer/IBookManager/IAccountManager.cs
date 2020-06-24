@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BookStoreModelLayer.IBookManager
 {
-    class IAccountManager
+   public class IAccountManager
     {
     }
 }

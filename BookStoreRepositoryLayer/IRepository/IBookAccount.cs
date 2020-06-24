@@ -9,7 +9,7 @@ namespace BookStoreRepositoryLayer.IRepository
   public interface IBookAccount
     {
         
-        Task<string> StoreRegistration(BookRegistrationModel bookRegistrationModel);
+        Task<int> StoreRegistration(BookRegistrationModel bookRegistrationModel);
         Task<string> StoreLogin(LoginModel loginModel);
 
     }
