@@ -207,6 +207,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "BookStoreModelLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/BookStoreModelLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookStoreModelLayer.dll": {}
+        }
       }
     }
   },
@@ -681,10 +691,16 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "BookStoreModelLayer/1.0.0": {
+      "type": "project",
+      "path": "../BookStoreModelLayer/BookStoreModelLayer.csproj",
+      "msbuildProject": "../BookStoreModelLayer/BookStoreModelLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "BookStoreModelLayer >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -713,7 +729,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\BookStoreApp\\BookStoreBackEnd\\BookStoreModelLayer\\BookStoreModelLayer.csproj": {
+              "projectPath": "D:\\BookStoreApp\\BookStoreBackEnd\\BookStoreModelLayer\\BookStoreModelLayer.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

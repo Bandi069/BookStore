@@ -1,10 +1,16 @@
-﻿using System;
+﻿using BookStoreModelLayer.AccountModel;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BookStoreRepositoryLayer.IRepository
 {
-    class IBookAccount
+  public interface IBookAccount
     {
+        
+        Task<string> StoreRegistration(BookRegistrationModel bookRegistrationModel);
+        Task<string> StoreLogin(LoginModel loginModel);
+
     }
 }

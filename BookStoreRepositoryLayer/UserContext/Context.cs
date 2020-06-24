@@ -6,5 +6,6 @@ namespace BookStoreRepositoryLayer.UserContext
 {
     public class Context 
     {
+
     }
 }
