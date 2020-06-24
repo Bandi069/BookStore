@@ -1,0 +1,4 @@
+D:\BookStoreApp\BookStoreBackEnd\BookStoreRepositoryLayer\bin\Debug\netcoreapp2.1\BookStoreModelLayer.dll
+D:\BookStoreApp\BookStoreBackEnd\BookStoreRepositoryLayer\obj\Debug\netcoreapp2.1\BookStoreRepositoryLayer.csprojAssemblyReference.cache
+D:\BookStoreApp\BookStoreBackEnd\BookStoreRepositoryLayer\obj\Debug\netcoreapp2.1\BookStoreRepositoryLayer.AssemblyInfoInputs.cache
+D:\BookStoreApp\BookStoreBackEnd\BookStoreRepositoryLayer\obj\Debug\netcoreapp2.1\BookStoreRepositoryLayer.AssemblyInfo.cs
