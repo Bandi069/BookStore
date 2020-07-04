@@ -10,7 +10,8 @@ namespace BookStoreRepositoryLayer.IRepository
     {
         
         Task<int> StoreRegistration(BookRegistrationModel bookRegistrationModel);
-        Task<string> StoreLogin(LoginModel loginModel);
+        string StoreLogin(LoginModel loginModel);
+        string JwtToken(LoginModel loginModel);
 
     }
 }
