@@ -1,0 +1,52 @@
+<div class="BooksCountDiv" fxFlex="100" fxLayout="row" fxLayoutAlign="center center">
+  <div class="book" fxFlex="50" fxFlexOffset="15%" fxLayout="row" fxLayoutAlign="start center">
+    Books <span class="priceCount">( {{totalBooksCount}} Items)</span>
+  </div>
+  <div class="pricesort" fxFlex="50" fxLayout="row" fxLayoutAlign="space-around end">
+    <button mat-raised-button class="priceButton">
+      <mat-form-field>
+        <mat-label>Sort by relevance</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let bookprice of price" [value]="bookprice.value">
+            {{bookprice.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </button>
+  </div>
+</div>
+
+<!-- <div class="card-div">
+  <mat-card class="maincard">
+    <div class="card">
+      <mat-card class="bookCard"  *ngIf="book.booksCount!=0; else noStock">
+        <img class="imgSizes" [src]="book.bookImage" >
+      </mat-card>
+      <ng-template #noStock>
+        <mat-card class="crd">
+          <mat-card class="stockcard">
+            <span class="alignment">OUT OF STOCK</span>
+          </mat-card>
+          <img class="img_size outOfStock" [src]="book.bookImage">
+        </mat-card>
+      </ng-template>
+    </div>
+    <span class="title">description</span>
+    <p>by {{book.author}}</p>
+    <span>Rs.{{book.bookPrice}}</span>
+    <div class="AddWish">
+      <div fxLayout.xs="column" fxLayoutAlign="center" fxLayout="row" fxLayout="row wrap">
+        <button fxLayoutAlign="center" fxLayout.xs="100" 
+        fxFlex.md="30" fxFlex.sm="40" class="addBagBtn" mat-button>
+          ADD TO BAG
+        </button>
+        <button fxLayoutAlign="center" fxLayout.xs="100" 
+        fxFlex.md="30" fxFlex.sm="40" class="addWishBtn" mat-button>
+          <a>
+            WISHLIST
+          </a>
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>  -->
