@@ -1,22 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Routes,RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import {StoreRoutingModule} from './store-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegistrationComponent } from './Component/registration/registration.component';
-import { LoginPageComponent } from './Component/login-page/login-page.component';
+import { AccountService } from './Service/account.service';
+import {AuthGuardServiceService} from './Service/auth-guard-service.service';
+import { MaterialModulesModule} from './material-modules/material-modules.module';
+import { BooksShowComponent } from './Component/books-show/books-show.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrationComponent,
-    LoginPageComponent
+    routingComponents,
+    BooksShowComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    MaterialModulesModule,
+    StoreRoutingModule,
+    AppRoutingModule,
+    HttpClientModule,
+    RouterModule.forRoot([])
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AccountService,AuthGuardServiceService],
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+  ]
 })
 export class AppModule { }
