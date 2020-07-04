@@ -1,0 +1,84 @@
+@import '../../../scss/mixin.scss';
+@import '../../../scss/variable.scss';
+@import '../../../scss/color.scss';
+.registration-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  .registration-full-width {
+    width: 100%;
+  }
+  .titlebar{
+    @include displaybox;
+  }
+  // .regimage{
+  //  // margin:26px 115px;
+  // }
+  .funtitle{
+   color:$redclr;
+   @include titlesize;
+  }
+  ::ng-deep.mat-form-field-flex paddiv{
+    padding:0px;
+  }
+  :host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex{padding: 0px;}
+  :host ::ng-deep .mat-form-field-infix{
+    left:12px;
+  }
+  :host ::ng-deep .mat-form-field-suffix{
+    margin-right: 16px;
+  }
+  h1{
+      color: darkslategray;
+      padding-top: 2%;
+  }
+  .card
+  {
+    margin: 0px 360px;
+    align-items: center;
+    width: 45%;
+    height: 80%;
+    align-content: center;
+    background-color: whitesmoke;
+    box-shadow: 5px 4px 7px rgba(141, 124, 124, 0.3)
+  }
+  .subtitle
+  {
+      color:blue;
+     @include displaybox;
+      font-size: 27px;
+  }
+  
+  .dis{
+  //  display: flex;
+   // justify-content: center;
+    align-items: center;
+  }
+  .inputfield{
+    width: 75%;
+    margin: auto;
+  }
+  .w-100{
+    width:100%;
+  }
+  .mr-10{
+    margin-right: 10px;
+  }
+  .w-80{
+    width: 80%;
+  }
+  .registerbtn{
+   // background-color: blue;
+  font-weight: 500;
+    margin-bottom: 10px;
+    margin-left: 157px;
+  }
+  .noaccount{margin-left: 100px;}
+  a{
+    text-decoration: none;
+  }
+  :host ::ng-deep .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{ width: 1.4em;
+    height: 1.4em;}
+ 
+ 
