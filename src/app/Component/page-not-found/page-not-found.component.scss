@@ -1,0 +1,9 @@
+@import '../../../scss/color.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/variable.scss';
+ .danger {
+   @include important-text;
+ }
+ .hello{
+    color: $darkgray;
+ }
