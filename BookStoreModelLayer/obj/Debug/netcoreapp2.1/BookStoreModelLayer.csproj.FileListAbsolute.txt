@@ -1,0 +1,10 @@
+D:\BookStoreApp\BookStoreBackEnd\BookStoreModelLayer\bin\Debug\netcoreapp2.1\BookStoreModelLayer.deps.json
+D:\BookStoreApp\BookStoreBackEnd\BookStoreModelLayer\bin\Debug\netcoreapp2.1\BookStoreModelLayer.runtimeconfig.json
+D:\BookStoreApp\BookStoreBackEnd\BookStoreModelLayer\bin\Debug\netcoreapp2.1\BookStoreModelLayer.runtimeconfig.dev.json
+D:\BookStoreApp\BookStoreBackEnd\BookStoreModelLayer\bin\Debug\netcoreapp2.1\BookStoreModelLayer.dll
+D:\BookStoreApp\BookStoreBackEnd\BookStoreModelLayer\bin\Debug\netcoreapp2.1\BookStoreModelLayer.pdb
+D:\BookStoreApp\BookStoreBackEnd\BookStoreModelLayer\obj\Debug\netcoreapp2.1\BookStoreModelLayer.AssemblyInfoInputs.cache
+D:\BookStoreApp\BookStoreBackEnd\BookStoreModelLayer\obj\Debug\netcoreapp2.1\BookStoreModelLayer.AssemblyInfo.cs
+D:\BookStoreApp\BookStoreBackEnd\BookStoreModelLayer\obj\Debug\netcoreapp2.1\BookStoreModelLayer.dll
+D:\BookStoreApp\BookStoreBackEnd\BookStoreModelLayer\obj\Debug\netcoreapp2.1\BookStoreModelLayer.pdb
+D:\BookStoreApp\BookStoreBackEnd\BookStoreModelLayer\obj\Debug\netcoreapp2.1\BookStoreModelLayer.csprojAssemblyReference.cache

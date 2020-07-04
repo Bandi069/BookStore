@@ -1,0 +1,15 @@
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreManagerLayer.deps.json
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreManagerLayer.runtimeconfig.json
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreManagerLayer.runtimeconfig.dev.json
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreManagerLayer.dll
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreManagerLayer.pdb
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreModelLayer.dll
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreRepositoryLayer.dll
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreRepositoryLayer.pdb
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\bin\Debug\netcoreapp2.1\BookStoreModelLayer.pdb
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\obj\Debug\netcoreapp2.1\BookStoreManagerLayer.csprojAssemblyReference.cache
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\obj\Debug\netcoreapp2.1\BookStoreManagerLayer.AssemblyInfoInputs.cache
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\obj\Debug\netcoreapp2.1\BookStoreManagerLayer.AssemblyInfo.cs
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\obj\Debug\netcoreapp2.1\BookStoreManagerLayer.csproj.CopyComplete
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\obj\Debug\netcoreapp2.1\BookStoreManagerLayer.dll
+D:\BookStoreApp\BookStoreBackEnd\BookStoreManagerLayer\obj\Debug\netcoreapp2.1\BookStoreManagerLayer.pdb

@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using BookStoreModelLayer.BookManager;
 using BookStoreModelLayer.IBookManager;
 using BookStoreRepositoryLayer.IRepository;
-using BookStoreRepositoryLayer.Logger;
 using BookStoreRepositoryLayer.Repository;
 using BookStoreRepositoryLayer.UserContext;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -19,12 +18,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using NLog;
 using Swashbuckle.AspNetCore.Filters;
 using Swashbuckle.AspNetCore.Swagger;
+using BookStoreManagerLayer.BookManager;
+using BookStoreManagerLayer.IBookManager;
+using Microsoft.Extensions.Logging;
 
 namespace BookStoreBackEnd
 {
@@ -32,7 +32,7 @@ namespace BookStoreBackEnd
     {
         public Startup(IConfiguration configuration)
         {
-          //  LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "nlog.config"));
+            // LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
             Configuration = configuration;
         }
 
@@ -47,9 +47,14 @@ namespace BookStoreBackEnd
             services.AddTransient<Context>();
             services.AddTransient<IAccountManager, AccountManager>();
             services.AddTransient<IBookAccount, BookAccount>();
+            services.AddTransient<IAddBookRepo, AddBookRepo>();
+            services.AddTransient<IAddBookManager, AddBookManager>();
+            services.AddTransient<ICartRepo, CartRepo>();
+            services.AddTransient<ICartManager, CartManager>();
+            services.AddTransient<ICustomerDetailsManager, CustomerDetailsManager>();
+            services.AddTransient<ICustomerDetailsRepo, CustomerDetailsRepo>();
             services.Configure<DataProtectionTokenProviderOptions>(opt =>
            opt.TokenLifespan = TimeSpan.FromHours(2));
-            services.AddSingleton<ILog, LogNLog>();
 
             var key = Configuration["Jwt:secretKey"];
             var symmetricKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
@@ -79,7 +84,7 @@ namespace BookStoreBackEnd
             }));
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
+                c.SwaggerDoc("v1", new Info
                 {
                     Version = "v1",
                     Title = "BookStore API",
@@ -98,7 +103,7 @@ namespace BookStoreBackEnd
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             app.UseCors("MyPolicy");
             if (env.IsDevelopment())
@@ -109,7 +114,8 @@ namespace BookStoreBackEnd
             {
                 app.UseHsts();
             }
-           // env.ConfigureNLog("nlog.config");
+            loggerFactory.AddFile("Logs/store-{Date}.txt");
+
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();
@@ -119,7 +125,6 @@ namespace BookStoreBackEnd
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "BookStore API");
             });
 
-           
         }
     }
 }

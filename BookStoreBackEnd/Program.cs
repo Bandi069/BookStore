@@ -19,6 +19,9 @@ namespace BookStoreBackEnd
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+        //    .UseKestrel();
+        //.UseIISintegration();
                 .UseStartup<Startup>();
+           //.Build();
     }
 }
