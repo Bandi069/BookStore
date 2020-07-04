@@ -1,0 +1,101 @@
+@import '../../../scss/mixin.scss';
+// .registration-form {
+//     min-width: 150px;
+//     max-width: 500px;
+//     width: 100%;
+//   }
+  .login-main{
+    font-size: 40px;
+    color: red;
+    letter-spacing: .1px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  .tostore{
+    color: black;
+    font-family: roboto,arial,sans-serif;
+    direction: ltr;
+    font-family: 'Roboto',sans-serif;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: .1px;
+    line-height: 1.5;
+    direction: ltr;
+  }
+  .signiheading{
+    font-family: roboto,arial,sans-serif;
+    color: blue;
+    direction: ltr;
+    font-family: 'Roboto',sans-serif;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: .1px;
+    line-height: 1.5;
+    direction: ltr;
+  }
+  .loginpagediv{
+    margin-top:3%;
+  }
+  .registration-full-width {
+    width: 100%;
+  }
+  .titlebar{
+    @include  displaybox;
+    }
+  
+  ::ng-deep.mat-form-field-flex paddiv{
+    padding:0px;
+  }
+  .place::placholder{
+    left:5px;
+  }
+  :host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex{padding: 0px;}
+  :host ::ng-deep .mat-form-field-infix{
+    left:12px;
+  }
+  :host ::ng-deep .mat-form-field-suffix{
+    margin-right: 16px;
+  }
+  
+  :host ::ng-deep .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{ width: 1.4em;
+    height: 1.4em;}
+  // :host ::ng-deep .eyeicon .mat-icon-button .mat-button-base {
+  //   width: 1.4em;
+  //   height: 1.4em;}
+ 
+  .card
+  {
+   // margin: 28px 315px;
+       width: 45%;
+       height: auto;
+       min-height: 350px;
+    background-color: whitesmoke;
+    //box-shadow: 5px 4px 7px rgba(141, 124, 124, 0.3);
+    border: 1px solid #dadce0;
+  }
+  .subtitle {
+      color:blue;
+     @include displaybox;
+      font-size: 27px;
+  }
+//   .dis{
+//  @include displaybox;
+//   }
+  .inputfield{
+    width: 75%;
+    margin: auto;
+  }
+  .logincls{
+    font-weight: 500;
+   
+  }
+  //.noaccount{margin-left: 100px;}
+  a{
+    text-decoration: none;
+  }
+ .signinbutton{
+ // margin-left: 195px;
+    padding: 5px;
+ }
