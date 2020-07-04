@@ -1,0 +1,25 @@
+@mixin textclr{
+    color:blue;
+}
+@mixin important-text {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    //border: 1px solid blue;
+  }
+  @mixin borderradius {
+    border-radius: 50%;
+  }
+  @mixin displaybox{
+      display: flex;
+      justify-content: center;
+  }
+  @mixin titlesize{
+    font-size: 40px;
+  }
+  @mixin anchor{
+    text-decoration: none;
+   // color: inherit;
+    border: none;
+    outline: none;
+  }
