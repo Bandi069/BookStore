@@ -1,1 +1,77 @@
-<p>registration works!</p>
+<div class="card">
+    <div class="titlebar">
+        <img class="regimage" src="../../../assets/BookIcon.svg">
+        <div class="funtitle">BOOK STORE APP</div>
+    </div>
+    <div>
+        <div>
+            <mat-card-title-group>
+                <mat-card-title class="subtitle">
+                    Hey! Register Here
+                </mat-card-title>
+            </mat-card-title-group>
+            <br>
+        </div>
+        <div class="inputfield">
+            <div class="d-flex w-100">
+
+                <div class="w-100 mr-10 pad-div">
+                    <mat-form-field class="registration-full-width paddiv" appearance="outline">
+                        <mat-label class="labelColor">First name</mat-label>
+                        <input matInput [formControl]="firstName" placeholder="" required>
+                        <mat-error *ngIf="firstName.hasError('required')">Enter First name</mat-error>
+                        <mat-error *ngIf="firstName.hasError('minlength')">Name should be minimum 4 characters
+                        </mat-error>
+                        <mat-error *ngIf="firstName.hasError('pattern') && !firstName.hasError('minlength')">
+                            Enter valid name</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="w-100">
+                    <mat-form-field class="registration-full-width" appearance="outline">
+                        <mat-label class="labelColor">Last Name</mat-label>
+                        <input matInput [formControl]="lastName" placeholder="Last Name" required>
+                        <mat-error *ngIf="lastName.hasError('required')">Enter Last name</mat-error>
+                        <mat-error *ngIf="lastName.hasError('minlength')">Name should be minimum 4 characters
+                        </mat-error>
+                        <mat-error *ngIf="lastName.hasError('pattern') && !firstName.hasError('minlength')">
+                            Enter valid name</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div>
+                <mat-form-field class="registration-full-width " appearance="outline">
+                    <mat-label class="labelColor">Email</mat-label>
+                    <input matInput [formControl]="email" placeholder="Email" required>
+                    <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">Invalid email
+                    </mat-error>
+                    <mat-error *ngIf="email.hasError('required')">Email is Required</mat-error>
+                </mat-form-field>
+            </div>
+            <div style="font-size: 18px">
+                <mat-form-field class="registration-full-width " appearance="outline">
+                    <mat-label class="labelColor">Password</mat-label>
+                    <input matInput [formControl]="password" placeholder="" type="password" required
+                        [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        <!-- <img src="../../../assets/visibility_off-24px.svg"> -->
+                    </button>
+                    <mat-error *ngIf="password.hasError('required')">Enter a password</mat-error>
+                    <mat-error *ngIf="password.hasError('minlength')"> Should minimum 8 characters
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="button">
+                <button mat-raised-button type="button" color="primary"
+                    [disabled]="!firstName||!lastName||!password.valid||!email.valid" (click)="registrationForm()"
+                    class="registerbtn" id="register">Register Here</button>
+            </div>
+            <div class="disp">
+                <span class="noaccount">Already Have an account? <a href="loginpage">Login</a></span>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
