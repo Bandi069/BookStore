@@ -1,1 +1,57 @@
-<p>login-page works!</p>
+<ngx-spinner></ngx-spinner>
+<div fxFlex fxLayout="row" fxLayoutAlign="center center" class="loginpagediv">
+    <!-- <div fxFlex="30" fxFlex.xs="100" fxFlex.sm="70"> -->
+    <mat-card class="card">
+        <div class="imagetop" fxLayoutAlign="center">
+            <img src="../../../assets/BookIcon1.png">
+        </div>
+        <div class="login-header">
+            <mat-card-header fxLayoutAlign="center">
+                <mat-card-title class="login-main">
+                    <span class="maintitle">BOOK STORE</span>
+                </mat-card-title>
+            </mat-card-header>
+
+            <mat-card-header fxLayoutAlign="center">
+                <mat-card-title class="signiheading">Sign in</mat-card-title>
+            </mat-card-header>
+            <div>
+                <mat-card-header fxLayoutAlign="center">
+                    <mat-card-title class="tostore">continue to Book Store </mat-card-title>
+                </mat-card-header>
+            </div>
+        </div>
+        <div class="inputfield">
+            <div class="email-log" fxLayout="column">
+
+                <mat-form-field class="registration-full-width" appearance="outline">
+                    <mat-label class="labelColor">Email</mat-label>
+                    <input matInput class="place" [formControl]="email" placeholder="Email" required>
+                    <mat-error *ngIf="email.invalid"> {{ emailErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="email-log" fxLayout="column">
+                <mat-form-field class="registration-full-width " appearance="outline">
+                    <mat-label class="labelColor">Password</mat-label>
+                    <input matInput [formControl]="password" placeholder="" type="password" required
+                        [type]="hide ? 'password' : 'text'">
+                    <button class="eyeicon" mat-icon-button matSuffix (click)="hide = !hide"
+                        [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error *ngIf="email.invalid"> {{ passwordErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="signinbutton" fxLayout="column" fxLayoutAlign = "space-between center">
+                <button mat-raised-button type="button" color="primary"
+                 [disabled]="!password.valid||!email.valid"
+                    (click)="loginForm()" class="logincls" id="register">Sign in</button>
+            </div>
+            <div class="display" fxLayout="column" fxLayoutAlign = "space-between center">
+                <span class="noaccount">Don't have an account? <a href="register">Register Here</a></span>
+            </div>
+            <br>
+        </div>
+    </mat-card>
+    <!-- </div> -->
+</div>
