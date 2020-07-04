@@ -1,0 +1,86 @@
+@import '../../../scss/color.scss';
+@import '../../../scss/mixin.scss';
+@import '../../../scss/variable.scss';
+:host ::ng-deep .mat-card{
+ //   background-color: darkred;
+    padding: 0px;
+   // border: 0.5px solid darkred;
+}
+.toolbar{
+    background-color: darkred;
+    padding: 0px;
+    border: 0.5px solid darkred;
+}
+.booktitle{
+    font-size: 23px;
+    font-weight: 400;
+    color:white;
+
+}
+.image{height: 30px;
+    width: 30px;}
+    .primary-tooltip{
+        color:blue;
+    }
+    // .imagetitle{
+    //     margin-left: 50px;    }
+        .saerchBar{
+            place-content: center;
+            align-items: center;
+            flex-direction: row;
+            box-sizing: border-box;
+            display: flex;
+            flex: 1 1 100%;
+            max-width: 61%;
+        }
+// // .page{
+// //     display: inline-flex;
+// // }
+// // .card{width: 86%;
+// // height:53px;    
+// //     margin-left: 7%;}
+
+// // .imgiconbutton{margin-left: 140px;
+// //    height: 50px;
+// // width: 50px;}
+
+
+    
+// .bookstoretitle{
+//     margin:16px;
+// }
+.searchbar {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    margin: auto;
+    //padding-left: 30px;
+   // background: transparent;
+    border: none;
+    font: normal 16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-variant-ligatures: none;
+    height: 46px;
+    outline: none;
+    width: 100%;
+  }
+.searchinput{
+    background: whitesmoke;
+    font: normal 16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    border-radius: 2px;
+    border: 0;
+    outline: 0 none;
+    font-size: 14px;
+    height: 25px;
+    width: 90%;
+}
+a, img {
+    @include anchor;
+}
+.CartWshSignout{
+    margin-right: 100px;
+}
+.bookshow{
+    margin-top: 10px;
+}
+    
+   

@@ -1,0 +1,52 @@
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: white">Loading.....</p>
+</ngx-spinner>
+<div class="toolbar" >
+    <mat-toolbar class="toolheader">
+        <mat-toolbar-row>
+            <!-- <div class="page" fxFlex="100"  fxLayout="row " fxLayoutGap="25px" > -->
+            <div class="imagetitle"  fxFlex="20" fxFlexOffset="15" fxLayout="row" fxLayoutAlign="start center"
+                fxLayoutGap="5%">
+                <a class=" imgiconbutton">
+                    <img [style.margin-top]="'6px'" (click)="home()" src="../../../assets/BookIcon.svg" class="image">
+                </a>
+                <div class="bookstoretitle">
+                    <span class="booktitle">Bookstore</span>
+                </div>
+            </div>
+            <div class="searchBar" fxFlex="40" fxLayoutAlign="center center">
+                <mat-card class="searchbar">
+                    <button class="searchbutton" mat-icon-button>
+                        <mat-icon matSuffix>search</mat-icon>
+                    </button>
+                    <input class="searchinput" type="text" name="search" autocomplete="off" placeholder="Search">
+                </mat-card>
+            </div>
+            <div class="cartwishsignout" fxFlexOffset="10%" fxFlex="20" fxLayout="row" fxLayoutGap="0.3%" fxLayoutAlign="start center">
+                <div class="cart">
+                    <a>
+                        <img class="cartimg" matTooltip='Cart' src="../../../assets/shopping-cart.png">
+                    </a>
+                </div>
+                <div class="cart" fxFlexOffset="5">
+                    <a>
+                        <img class="cartimg" matTooltip="Wishlist" src="../../../assets/wishlistcart.png">
+                    </a>
+                </div>
+                <div class="signoutclass" fxFlexOffset="5">
+                    <a class="cartimg" (click)="logout()">
+                        <img src="../../../assets/sign-out.png">
+                    </a>
+                </div>
+            </div>
+            <!-- </div> -->
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-divider></mat-divider>
+</div>
+<div >
+    <app-books-display></app-books-display>
+</div>
+<div class="bookshow">
+    <app-books-show></app-books-show>
+</div>
