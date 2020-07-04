@@ -1,7 +1,8 @@
-﻿using BookStoreModelLayer.AccountModel;
+﻿using BookStoreModelLayer;
+using BookStoreModelLayer.AccountModel;
 using BookStoreModelLayer.IBookManager;
-using BookStoreRepositoryLayer.Logger;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,23 +10,38 @@ using System.Threading.Tasks;
 
 namespace BookStoreBackEnd.Controllers
 {
-    public class StoreAccountController: ControllerBase
+
+    [Route("api/[controller]")]
+    [ApiController]
+    public class StoreAccountController : ControllerBase
     {
-        private ILog logger;
+        private ILogger<StoreAccountController> logger;
         private readonly IAccountManager accountManager;
-        public StoreAccountController(IAccountManager account,ILog log)
+        public StoreAccountController(IAccountManager account, ILogger<StoreAccountController> log)
         {
             this.accountManager = account;
-            this.logger = log;
+            // this.logger = log;
+            logger = log;
         }
+
         [HttpPost]
-        [Route("storeaccount")]
-        public async Task<IActionResult> Register([FromBody] BookRegistrationModel bookRegistrationModel)
+        public async Task<IActionResult> Register([FromBody]BookRegistrationModel bookRegistrationModel)
         {
             try
             {
                 var result = await this.accountManager.StoreRegistration(bookRegistrationModel);
-                return Ok(new { result });
+                if (result != null)
+                {
+                    logger.LogInformation("Register details");
+                    return this.Ok(result);
+                }
+                else
+                {
+                    var jsonobj = new JsonError();
+                    jsonobj.ErrorCode = 400;
+                    jsonobj.ErrorMessage = "Invalid Credentials";
+                    return BadRequest(jsonobj);
+                }
             }
             catch (Exception e)
             {
@@ -34,14 +50,25 @@ namespace BookStoreBackEnd.Controllers
 
         }
 
-        [HttpPost]
-        [Route("storelogin")]
-        public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
+        [HttpPost("StoreLogin")]
+       
+        public IActionResult Login([FromBody] LoginModel loginModel)
         {
             try
             {
-                var result = await this.accountManager.Login(loginModel);
-                return Ok(new { result });
+                logger.LogInformation("Login information");
+                var result =  this.accountManager.Login(loginModel);
+                if (result != null)
+                {
+                    return Ok(new { token=result });
+                }
+                else
+                {
+                    var jsonobj = new JsonError();
+                    jsonobj.ErrorCode = 400;
+                    jsonobj.ErrorMessage = "Bad request ";
+                    return BadRequest(jsonobj);
+                }
             }
             catch (Exception e)
             {
